@@ -31,5 +31,5 @@ jobs:
           mode: flippy # optional, default is flippy
         env: 
           OPENWRT_ARMVIRT: openwrt/bin/targets/*/*/*.tar.gz
-          PACKAGE_SOC: all
+          PACKAGE_SOC: s905d
           KERNEL_AUTO_LATEST: true
