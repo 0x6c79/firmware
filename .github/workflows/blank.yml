@@ -26,5 +26,6 @@ jobs:
       - uses: ophub/flippy-openwrt-actions@v0.1.0
         with:
           # Select script.
+          OPENWRT_ARMVIRT: openwrt/bin/targets/*/*/*.tar.gz
           SCRIPT_S905D: mk_s905d_n1.sh
           mode: flippy # optional, default is flippy
