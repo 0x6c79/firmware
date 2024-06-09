@@ -23,9 +23,13 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: ophub/flippy-openwrt-actions@v0.1.0
+      - name: flippy_openwrt_packaging
+        uses: ophub/flippy-openwrt-actions@v0.1.0
         with:
           # Select script.
-          OPENWRT_ARMVIRT: openwrt/bin/targets/*/*/*.tar.gz
           SCRIPT_S905D: mk_s905d_n1.sh
           mode: flippy # optional, default is flippy
+        env: 
+          OPENWRT_ARMVIRT: openwrt/bin/targets/*/*/*.tar.gz
+          PACKAGE_SOC: all
+          KERNEL_AUTO_LATEST: true
